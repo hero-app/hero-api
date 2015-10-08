@@ -67,7 +67,7 @@ router.post('/', function(req, res) {
                     key: userKey,
                     fbid: facebookUser.id.toString(),
                     name: facebookUser.name,
-                    image: facebookUser.picture.url,
+                    image: facebookUser.picture.data.url,
                     location: facebookUser.location
                 }, function(err, createdUser) {
                     if(err) {
