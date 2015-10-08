@@ -85,6 +85,8 @@ router.post('/', function(req, res) {
                     res.send(createdUser);
                 });
             } else {
+                // TODO: Should update user details
+
                 console.log('There is a user associated with this facebook ID. Doing nothing...');
 
                 res.send(user);

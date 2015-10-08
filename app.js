@@ -11,11 +11,15 @@ var app = express();
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
+app.use(function(req, res, next) {
+    console.log('Got request for', req.originalUrl);
+    next();
+});
 
 app.use('/', require('./api'));
 
 // Invalid path default error message
-app.use(function(req, res, next) {
+app.use(function(req, res) {
     res.status(500).send({
         error: 'Invalid path'
     });
