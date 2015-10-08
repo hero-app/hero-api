@@ -3,12 +3,30 @@
  */
 
 var express = require('express');
+var Challenge = require('../db').Challenge;
+var filterUserData = require('../helpers/filter_user_data');
 
 
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-    res.send('feed');
+router.post('/', function(req, res) {
+    Challenge.find({status: 'completed'}, function(err, completedChallenges) {
+        if(err) {
+            console.log('An error has occurred while trying to get the feed', err);
+
+            res.status(500).send({
+                error: 'Internal server error'
+            });
+
+            return;
+        }
+
+        completedChallenges.forEach(function(challenge) {
+            challenge.creator = filterUserData(challenge.creator);
+        });
+
+        res.send(completedChallenges);
+    });
 });
 
 
