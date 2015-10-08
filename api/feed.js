@@ -25,7 +25,7 @@ router.post('/', function(req, res) {
             challenge.creator = filterUserData(challenge.creator);
         });
 
-        res.send(completedChallenges);
+        res.send({challenges: completedChallenges});
     });
 });
 
