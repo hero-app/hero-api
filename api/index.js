@@ -11,6 +11,6 @@ router.get('/', function(req, res) {
     res.send('hello');
 });
 router.use('/login', require('./login'));
-
+router.use('/challenges', require('./challenges'));
 
 module.exports = router;

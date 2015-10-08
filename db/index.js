@@ -20,3 +20,4 @@ mongoose.connection.on('error', function(err) {
 
 
 module.exports.User = mongoose.model('User', require('./models/user'));
+module.exports.Challenge = mongoose.model('Challenge', require('./models/challenge'));
