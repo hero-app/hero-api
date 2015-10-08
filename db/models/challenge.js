@@ -10,15 +10,14 @@ var challengeSchema = new Schema({
     status              : String, // active | completed
     title               : String,
     description         : String,
-    rules               : Array,
+    rules               : String,
     creator             : Object,
     creation_date       : Number,
     category            : String,
     image               : String,
     participants        : Array,
     fund_goal           : Number,
-    charity_percentage  : Number,
-    videos              : Array
+    charity_percentage  : Number
 });
 
 

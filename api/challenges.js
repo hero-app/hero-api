@@ -35,6 +35,9 @@ router.post('/', function(req, res) {
             return;
         }
 
+        // TODO: Video in participants
+        // TODO: Participant should be a user
+
         var challenge = {
             status: challengeData.status || 'active', // Should be active by default, but allows overriding for presentation purposes
             title: challengeData.title,
@@ -46,8 +49,7 @@ router.post('/', function(req, res) {
             image: challengeData.image,
             participants: challengeData.participants || [], // Should be empty by default, but allows overriding for presentation purposes
             fund_goal: challengeData.fund_goal,
-            charity_percentage: challengeData.charity_percentage,
-            videos: challengeData.videos || [] // Should be empty by default, but allows overriding for presentation purposes
+            charity_percentage: challengeData.charity_percentage
         };
 
         Challenge.create(challenge, function(err, createdChallenge) {
