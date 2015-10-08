@@ -7,7 +7,7 @@ var express = require('express');
 
 var router = express.Router();
 
-router.use('/feed', require('./feed'));
+router.use('/login', require('./login'));
 
 
 module.exports = router;
