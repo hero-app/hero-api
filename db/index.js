@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 
 
-var connectionString = 'mongodb://hero:BattleHack2015@ds035014.mongolab.com:35014/hero';
+var connectionString = 'mongodb://hero:BattleHack2015@candidate.53.mongolayer.com:10454,candidate.54.mongolayer.com:10195/hero?replicaSet=set-5616b6a0d55e3ef8c00004a4';
 
 mongoose.connect(connectionString, function(err) {
      if(err) {
