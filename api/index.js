@@ -13,6 +13,7 @@ router.get('/', function(req, res) {
 router.use('/login', require('./login'));
 router.use('/challenges', require('./challenges'));
 router.use('/feed', require('./feed'));
+router.use('/discover', require('./discover'));
 
 
 module.exports = router;
