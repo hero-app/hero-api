@@ -10,7 +10,7 @@ var filterUserData = require('../helpers/filter_user_data');
 var router = express.Router();
 
 router.post('/', function(req, res) {
-    Challenge.find({status: 'completed'}, function(err, completedChallenges) {
+    Challenge.find({status: 'completed'}).sort({creation_date: 'ascending'}).exec(function(err, completedChallenges) {
         if(err) {
             console.log('An error has occurred while trying to get the feed', err);
 

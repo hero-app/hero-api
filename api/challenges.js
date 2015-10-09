@@ -214,7 +214,7 @@ router.post('/:id/pledge', function(req, res) {
                     }
 
                     res.send({
-                        success: 'Pledged successfully'
+                        success: true
                     });
                 });
             });
