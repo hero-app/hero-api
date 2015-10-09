@@ -10,7 +10,8 @@
     "crypto": "0.0.3",
     "randomstring": "~1.1.0",
     "bitwise-xor": "0.0.0",
-    "mongoose": "~4.1.10"
+    "mongoose": "~4.1.10",
+    "braintree": "~1.29.0"
   },
   "devDependencies": {},
   "scripts": {

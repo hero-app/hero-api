@@ -17,7 +17,8 @@ var challengeSchema = new Schema({
     image               : String,
     participants        : Array,
     fund_goal           : Number,
-    charity_percentage  : Number
+    charity_percentage  : Number,
+    backers             : Array
 });
 
 
