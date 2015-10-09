@@ -14,6 +14,7 @@ router.use('/login', require('./login'));
 router.use('/challenges', require('./challenges'));
 router.use('/feed', require('./feed'));
 router.use('/discover', require('./discover'));
+router.use('/payment', require('./payment'));
 
 
 module.exports = router;
