@@ -29,7 +29,7 @@ router.post('/client_token', function(req, res) {
             return;
         }
 
-        res.send(response.clientToken);
+        res.send({client_token: response.clientToken});
     });
 });
 
