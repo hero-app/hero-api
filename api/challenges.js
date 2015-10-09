@@ -112,7 +112,7 @@ router.post('/:id/pledge', function(req, res) {
     var amount = req.body.amount;
     var key = req.body.key;
     var challengeId = req.params.id;
-    var nonce = req.body.payment_method_nonce;
+    var nonce = req.body.nonce;
 
     User.findOne({key: key}, function(err, user) {
         if(err) {
